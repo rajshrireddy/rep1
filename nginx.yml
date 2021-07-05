@@ -1,0 +1,14 @@
+- name: install nginx
+  hosts: all
+  tasks:
+  - name: install nginx
+    apt:
+     name: nginx
+     update_cache: yes
+     become: yes
+    service:
+     name: nginx
+     state: started
+    copy:
+     src:  /var/lib/jenkins/workspace/job9/nginx.yml
+     dest: /home/ubuntu
