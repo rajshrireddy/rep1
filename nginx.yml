@@ -1,0 +1,14 @@
+- name: playbook1
+  hosts: all
+  become: yes
+  tasks:
+  - apt:
+     name: nginx
+     update_cache: yes
+     state: latest
+  - service:
+     name: nginx
+     state: started
+  - copy:
+     src:  /var/lib/jenkins/workspace/job9/nginx.yml
+     dest: /home/ubuntu
