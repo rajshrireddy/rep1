@@ -10,5 +10,6 @@
      name: nginx
      state: started
   - copy:
-     src:  /var/lib/jenkins/workspace/job9/nginx.yml
-     dest: /home/ubuntu
+     src:  /var/lib/jenkins/workspace/job9/index.html
+     dest: /home/ubuntu/usr/share/nginx/html
+  
