@@ -1,6 +1,6 @@
 resource aws_instance "i1"{
 count=3
-ami = "ami-0c1a7f89451184c8b"
+ami = "ami-09e67e426f25ce0d7"
 instance_type= "t2.micro"
 key_name= "rajshri"
  provisioner "local-exec" {
